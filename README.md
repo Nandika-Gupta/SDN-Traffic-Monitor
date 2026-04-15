@@ -31,7 +31,8 @@ cd ~/pox
 sudo mn --topo single,3 --controller remote
 
 ## Testing
-## Connectivity
+
+### Connectivity
 ```bash
 pingall
 
