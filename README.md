@@ -9,7 +9,22 @@
 
 ## Topology
 
-- 3 hosts, 1 switch, remote controller
+    h1
+     |
+     |
+    s1
+   /  \
+ h2    h3
+ - h1, h2, h3 are hosts  
+- s1 is an Open vSwitch  
+- Controller (POX) is remote and controls s1  
+
+## Topology Details
+
+- 3 hosts: h1 (10.0.0.1), h2 (10.0.0.2), h3 (10.0.0.3)  
+- 1 switch: s1  
+- Remote controller using POX  
+- All hosts connected to a single switch  
 
 ## Requirements
 - Ubuntu (20.04 / 22.04)
