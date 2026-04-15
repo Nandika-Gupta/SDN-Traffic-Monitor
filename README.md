@@ -19,8 +19,6 @@
 
 ## Execution
 
-## Execution
-
 ## Terminal 1
 ```bash
 cd ~/pox
