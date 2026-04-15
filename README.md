@@ -8,9 +8,7 @@
 - Uses ping and iperf for testing
 
 ## Topology
-
     h1
-     |
      |
     s1
    /  \
