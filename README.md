@@ -8,11 +8,12 @@
 - Uses ping and iperf for testing
 
 ## Topology
-    h1
-     |
-    s1
-   /  \
- h2    h3
+     h1
+      |
+      |
+      s1
+   /    \
+  h2     h3
  - h1, h2, h3 are hosts  
 - s1 is an Open vSwitch  
 - Controller (POX) is remote and controls s1  
