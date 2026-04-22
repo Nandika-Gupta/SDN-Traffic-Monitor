@@ -34,13 +34,13 @@
 
 ## Execution
 
-## Terminal 1
+## Terminal 1 - Controller
 ```bash
 cd ~/pox
-./pox.py ext.traffic_monitor
+./pox.py openflow.of_01 ext.traffic_monitor
 ```
 
-## Terminal 2
+## Terminal 2 - Mininet
 ```bash
 sudo mn --topo single,3 --controller remote
 ```
@@ -51,22 +51,27 @@ sudo mn --topo single,3 --controller remote
 pingall
 ```
 
-## Block Test
-```bash
-h3 ping h1
-```
-
 ## Allowed Traffic
 ```bash
 h1 ping h2
+```
+
+## Block Test
+```bash
+h3 ping h1
 ```
 
 ## Flow Table
 ```bash
 sh ovs-ofctl dump-flows s1
 ```
+## Throughput Test (Allowed Case)
+```bash
+h2 iperf -s &
+h1 iperf -c h2
+```
 
-## Throughput (iperf)
+## Throughput Test (Blocked Case)
 ```bash
 h3 iperf -s &
 h1 iperf -c h3
